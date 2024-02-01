@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: RAW_DATA
-    description: A daily clone of the IMS data from postgresql extracted at midnight.
+    description: snowflake data source
     database: "PUBLIC"
     tables:
       - name: SALES_DATA
