@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    description: A daily clone of the IMS data from postgresql extracted at midnight.
+    database: "PUBLIC"
+    tables:
+      - name: SALES_DATA
