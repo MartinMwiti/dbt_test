@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    description: snowflake data source
+    database: "PUBLIC"
+    tables:
+      - name: SALES_DATA
