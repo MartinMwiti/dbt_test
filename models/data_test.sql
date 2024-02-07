@@ -1,5 +1,5 @@
 -- This configuration sets the materialization of the model to a table and specifies the schema name.
-{{ config(materialized='table',schema = 'core_datamart')}}
+{{ config(materialized='table',schema = 'Mmwiti')}}
 
 -- CTE to count the number of facilities per city and country.
 WITH facility_count AS (
