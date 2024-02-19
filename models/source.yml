@@ -6,3 +6,7 @@ sources:
     database: "PUBLIC"
     tables:
       - name: SALES_DATA
+        loaded_at_field: SOLD_PRODUCT_CREATED_AT  # Column that indicates when a record was last updated
+        freshness:
+            warn_after: {count: 24, period: hour}  # Warn if data is older than 24 hours
+            error_after: {count: 48, period: hour}  # Error if data is older than 48 hours
