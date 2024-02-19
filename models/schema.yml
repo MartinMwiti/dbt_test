@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: data_test 
+    description: "Aggregated Sales Analysis: Highlight of sales trends and product demand within key areas over the last year."
+    columns:
+      - name: COUNTRY
+        description: "The country in which the sale was made."
+        tests:
+          - not_null
+
+      - name: Product_Name
+        description: "The name of the product sold."
+        tests:
+          - not_null
+          - unique
+
+      - name: Total_Sold
+        description: "The total quantity of products sold."
+        tests:
+          - not_null
+          # - test: accepted_values
+          #   config:
+          #     values: [X, Y, Z]
+
+      - name: Average_Price
+        description: "The average price at which the product was sold."
+        tests:
+          - not_null
+
+      - name: First_Sale
+        description: "The date of the first sale of the product."
+        tests:
+          - not_null
+
+      - name: Most_Recent_Sale
+        description: "The date of the most recent sale of the product."
+        tests:
+          - not_null
