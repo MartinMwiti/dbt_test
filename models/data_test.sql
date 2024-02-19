@@ -6,7 +6,7 @@ WITH facility_count AS (
     SELECT
         CITY,
         COUNTRY,
-        COUNT(FACILITY_ID) AS total_facilities
+        COUNT(DISTINCT FACILITY_ID) AS total_facilities
     FROM {{source('RAW_DATA','SALES_DATA')}}
     GROUP BY CITY, COUNTRY
 ),
